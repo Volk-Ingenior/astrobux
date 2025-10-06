@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <h1>Geo</h1>
+    <h1>Geowild</h1>
+
     <div>hell yeah</div>
 
 </body>
