@@ -5,13 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>iMain Page</title>
+    <title>Предсказатель</title>
 </head>
 
 <body>
-    <h1>Geowild</h1>
 
-    <div>hell yeah</div>
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+
+    <div class="cards">
+
+
+        <div class="cardbody">
+            <a href="#">
+                <div class="cardinfo">SAMА KARTOCHKA</div>
+            </a>
+        </div>
+
+        <div class="cardbody">
+            <a href="#">
+                <div class="cardinfo">SAMА KARTOCHKA</div>
+            </a>
+        </div>
+
+        <div class="cardbody">
+            <a href="#">
+                <div class="cardinfo">SAMА KARTOCHKA</div>
+            </a>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 
