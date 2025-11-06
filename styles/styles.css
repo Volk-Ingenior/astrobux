@@ -49,3 +49,13 @@ body {
     text-align: center;
     background-color: rgb(216, 216, 216);
 }
+
+#digits {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    font-size: 20px;
+
+}

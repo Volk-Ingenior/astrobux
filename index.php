@@ -8,16 +8,14 @@
     <title>Предсказатель</title>
 </head>
 
-<body>
 
+<body>
     <div class="header">HEADER</div>
     <div class="menu">MENU</div>
-
     <div class="cards">
 
-
         <div class="cardbody">
-            <a href="#">
+            <a href="antorpom.php">
                 <div class="cardinfo">SAMА KARTOCHKA</div>
             </a>
         </div>
