@@ -24,33 +24,35 @@
     <div class="datainput">
         <form action="" method="post">
             <br>
-            <input type="text" name="yearbirth" id="digits" minlength="4" maxlength="4" value="1984" required>Введите
-            год рождения
-            <br>
-            <input type="number" name="mainHeight" id="" value="170">Введите рост (в сантиметрах)
-            <br>
-            <input type="number" name="dl_antropos" id="" value="19">Введите длину Ладонь + Средний Палец ( в
-            сантиметрах)
-            <br>
-            <input type="number" name="sh_antropos" id="" value="15">Введите ширину Ладонь + Большой Палец ( в
-            сантиметрах)
-            <br>
-            <input type="number" name="heri_manus_antropos" id="" value="39">Введите длина руки (которой пишете)
-            от локтя
-            до среднего
-            пальца
-            <br>
-            <input type="number" name="prosopo_antropos" id="" value="15">Введите размер половины лица( в
-            сантиметрах)
-            <br>
+            <input type="number" name="yearbirth" id="digits" minlength="4" maxlength="4" min="1910" value="1984"
+                step="1" required>
+            <label for="yearbirth">Введите год рождения</label>
             <br><br>
-            <input type="submit" value="Рассчитать">
+            <input type="number" name="mainHeight" id="digits" value="170" min="30" step="1" required>
+            <label for="mainHeight">Введите рост (в сантиметрах)</label>
+            <br><br>
+            <input type="number" name="dl_antropos" id="digits" value="19" min="7" step="1" required>
+            <label for="">Введите длину Ладонь + Средний Палец ( в сантиметрах)</label>
+            <br><br>
+
+            <input type="number" name="sh_antropos" id="digits" value="15" min="7" step="1" required>
+            <label for="sh_antropos">Введите ширину Ладонь + Большой Палец ( в сантиметрах)</label>
+            <br><br>
+            <input type="number" name="heri_manus_antropos" id="digits" value="39" min="20" step="1" required>
+            <label for="heri_manus_antropos">Введите длина руки (которой пишете) от локтя до среднего пальца</label>
+            <br><br>
+            <input type="number" name="prosopo_antropos" id="digits" value="15" min="7" step="1" required>
+            <label for="prosopo_antropos">Введите размер половины лица( в сантиметрах)</label>
+            <br><br><br>
+            <input class="submit_btn" type="submit" value="Рассчитать">
             <br>
         </form>
 
         <div>РЕЗУЛЬТАТ </div>
 
         <?php
+        #Год рождения
+        
         #Рост
             $rost = $_POST["mainHeight"];
         #Длина ладони + средний палец
@@ -62,30 +64,16 @@
          #Длина половины лица  
             $faceHalf= $_POST["prosopo_antropos"];           
 
-            echo "Целевой коэффициент:  ";
+           # echo "Целевой коэффициент:  ";
             $target = round( (($armGreat/$rost ) + ($armMedian/$rost) + ($handFing /$rost)+($faceHalf/$rost ))* 10000);
-            echo $target;
+            #echo $target;
             echo "<br>";
 
             // Сначала проверяем есть ли у нас "звезды"
-
-            echo "<br><br>";
-            echo "индекс для запроса ";
+           # echo "индекс для запроса ";
 
             $idForRequest = checkLastTwoDigitsMath($target);
             echo $idForRequest; 
-
-            function checkLastTwoDigitsMath(int $mynumber): int 
-            {
-            if ($mynumber <= 0) {
-                return 5;             
-             }
-            else if  ($mynumber % 100 === 0) {
-                    return 10; 
-                } 
-            else return findDigitalRoot($mynumber);      
-            }
-
      
             $host = 'localhost'; // Имя хоста (для локальной БД)
             $dbname = 'prophet'; // Имя вашей базы данных
@@ -98,7 +86,7 @@
                 
                 // Опции PDO (например, режим обработки ошибок и режим выборки по умолчанию)
                 $options = [
-                    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, // Бросать исключения при ошибках
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Бросать исключения при ошибках
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,       // Получать результаты в виде ассоциативных массивов
                     PDO::ATTR_EMULATE_PREPARES   => false,                  // Отключение эмуляции подготовленных запросов
                 ];
@@ -108,16 +96,11 @@
                 
                 echo "✅ Подключение к базе данных успешно установлено!";
                 
-                // Дальнейшие операции с БД, например, выполнение запросов:
-                // $stmt = $pdo->query('SELECT * FROM my_table');
-                // while ($row = $stmt->fetch()) {
-                //     print_r($row);
-                // }
-
-            } catch (PDOException $e) {
+            } 
+            catch (PDOException $e) {
                 // Обработка ошибок подключения
-                die("❌ Ошибка подключения к базе данных: " . $e->getMessage());            }
-
+                die("❌ Ошибка подключения к базе данных: " . $e->getMessage()); 
+                       }
             // Дальше достаем инфу из БД
 
             echo "<br>";
@@ -133,25 +116,33 @@
                 $forecastReq= $stmt->fetch(); // Получить одну строку
                 
                 if ($forecastReq) {
+                // 4. Выводим результат пользователю, пусть читает
                     echo "<br>";
+                    echo "Год рождения, Рост Ладонь + мредний палец, Ладонь + Большой палец, Длина руки, Размер лица";
+                    echo "<br><br>";
                     echo $forecastReq["forecast"];
-                    #echo "Пользователь: " . $user['name'] . ", Email: " . $user['email'];
                 } else {
-                    echo "Пользователь не найден.";
+                    echo "No data";
                 }
-
                 // Чтобы получить все строки:
                 // $all_users = $stmt->fetchAll();
                 
             } catch (PDOException $e) {
                 echo "Ошибка выполнения запроса: " . $e->getMessage();
             }
-            #var_dump($forecastReq);
-
-            // По завершении работы соединение автоматически закрывается,
     
             $pdo = null;
 
+            function checkLastTwoDigitsMath(int $mynumber): int 
+                {
+                if ($mynumber <= 0) {
+                    return 5;             
+                }
+                else if  ($mynumber % 100 === 0) {
+                        return 10; 
+                    } 
+                else return findDigitalRoot($mynumber);      
+                }
 
 
             function findDigitalRoot(int $number): int {
