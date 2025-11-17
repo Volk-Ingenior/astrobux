@@ -12,63 +12,115 @@
     <title>Предсказатель</title>
 </head>
 
-
 <body>
-    <div class="header">augurium</div>
+    <div class="header">
+        <div class="slogan">augurium</div>
+        <div class="date_t">Сегодня: </div>
+        <div class="small_slogan"><b> <?php   echo date("d.m.Y");  ?> </b> | <b> Понедельник </b> | <b>119 День Года</b>
+        </div>
+
+    </div>
 
     <!--   MENU  START  -->
     <div class="menu">
+
         <a href="http://#">
-            <div class="navi">Item 1</div>
+            <div class="navi">Главная</div>
+        </a>
+        <a href="antorpom.php">
+            <div class="navi">Антрокул</div>
         </a>
         <a href="http://#">
-            <div class="navi">Item 2</div>
+            <div class="navi">Диемма</div>
         </a>
-        <a href="http://#">
-            <div class="navi">Item 3</div>
-        </a>
+
         <a href="http://#">
             <div class="navi">Item 4</div>
         </a>
         <a href="http://#">
-            <div class="navi">Item 5</div>
+            <div class="navi">Эрдеска</div>
         </a>
 
 
     </div>
     <!--   MENU  END  -->
 
+    <!--   INFOGRAF TODAY  START -->
+
     <div class="todayinfogram">
         <div class="todayIs">
 
             <div class="today">
                 <div class="today-lbl">
-                    <p>Сегодня</p>
+                    <p>Индекс гео-магнитных возмущений</p>
                 </div>
-                <div class="tdate"> <?php   echo date("d.m.Y");  ?> </div>
+                <div class="tdate">
+                    5
+                </div>
             </div>
             <br>
-            <div class="about-date">Понедельник</div>
-            <div class="about-date">119 день года</div>
+
+            <div class="about-date">ГМ буря: Умеренно</div>
 
 
         </div>
-        <div class="todayIs">
-            <h3>День звездных скоплнений</h3>
+        <div class="todayIs onwidth">
+            <p><b>День звездных скоплнений</b></p>
             <p>Энергетический потенциал</p>
         </div>
-        <div class="todayIs">Лунная фаза</div>
 
-        <div class="todayIs">Балл по шкале Дивего</div>
+        <div class="todayIs central onwidth">
+            <p><b>Лунная фаза</b></p>
+            <div class="moon_phase"></div>
+            <br>
+            <div class="phase"><b>Фаза 4</b></div>
+            <div class="phase description">Красивая полная луна</div>
+        </div>
 
-        <div class="todayIs">вапавпвапвапвап</div>
-        <div class="todayIs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam explicabo adipisci incidunt
-            earum officia pariatur sed. In doloremque, repellendus nostrum ratione, quidem, labore itaque ipsa tenetur
-            laborum quo officia commodi.</div>
+        <div class="todayIs central  onwidth vrtcl">
+            <div>
+                <div class="dv_scores ">8 из 10</div>
+                <div class="dv_scores_descr">баллов по шкале Дивего</div>
+            </div>
+        </div>
+
+        <div class="todayIs onwidth">
+            <h4>Биоритмический вектор</h4>
+            <div class="phisic">Физический: <b>45%</b></div>
+            <div class="emotion">Эмоциональный: <b>25%</b></div>
+            <div class="intellect">Интеллектуальный: <b>15%</b></div>
+        </div>
+        <div class="todayIs onwidth">
+            <h3>Характеристика дня</h3>
+            <p>
+                Сложный день для чувствительных людей. Слабый тонус, плохие сны, тупое состояние.
+                Сегодня можно простыть или повредить ногу. Может укусить собака.
+                Надо сегодня пить побольше воды и опасаться мелких животных.
+                Вегетерианцам сегодня лучше вернуться к мясу.
+
+            </p>
+            <p><b>Благоприятный день для рожденных в числах:</b> 5, 11, 18, 20</p>
+            <p><b>Неблагоприятный день для рожденных в числах:</b> 1, 3, 7, 29</p>
+        </div>
+    </div>
+    <br>
+    <!--   INFOGRAF TODAY  END -->
+
+    <!-- SPECIAL ANNOT START -->
+    <div class="todayinfogram">
+        Питание
+        Сон
+        Отношения
+        Опасность(Окружение)
+
+
     </div>
 
 
-    <!--
+    <!--   SPECIAL ANNOT  END -->
+
+
+
     <div class="cards">
 
         <div class="cardbody">
@@ -91,7 +143,31 @@
 
     </div>
 
--->
+
+
+
+
+
+    <!-- START FOOTER -->
+    <footer>
+        <div class="footer">
+            Footer
+
+            Шкала Дивего
+
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- END FOOTER -->
+
+
+
+
+
 
 
 

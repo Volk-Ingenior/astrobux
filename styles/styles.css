@@ -4,21 +4,22 @@ body {
     background-color: white;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-
-
 }
 
 .header {
     background-color: rgb(83, 83, 83);
-    height: 150px;
+    height: 220px;
     border-radius: 10px;
     color: rgb(238, 238, 238);
-    font-size: 100px;
-    font-weight: bold;
     text-align: center;
-    text-transform: uppercase;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.slogan {
+    font-size: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .menu {
@@ -72,10 +73,16 @@ body {
 .todayinfogram {
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 20px;
     display: flex;
-    flex-basis: 33%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /*f
     flex-basis: auto;
+    justify-content: flex-start;
+    *flex-basis: 33%;  */
 }
+
 
 .cards a {
     text-decoration: none;
@@ -128,10 +135,7 @@ input[type="number"] {
     border-radius: 5px;
 }
 
-.todayinfogram {
-    margin-top: 20px;
-    background-color: rgb(247, 247, 247);
-}
+
 
 .todayIs {
     border: 2px solid rgb(255, 255, 255);
@@ -148,5 +152,56 @@ input[type="number"] {
 }
 
 .tdate {
-    font-size: 35px;
+    font-size: 50px;
+    font-weight: bold;
 }
+
+.moon_phase {
+    background-color: rgb(80, 80, 80);
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.central {
+    text-align: center;
+}
+
+.phase {
+    font-size: 12px;
+}
+
+.dv_scores {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.vrtcl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.dv_scores_descr {
+    font-size: 12px;
+}
+
+.onwidth {
+    flex-grow: 1;
+}
+
+.footer {
+    background-color: rgb(83, 83, 83);
+    height: 120px;
+    color: rgb(238, 238, 238);
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+footer {}
