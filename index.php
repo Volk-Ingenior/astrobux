@@ -144,8 +144,6 @@ $currentDay_simple = getDayOfYear_simple('now');
 
     <!--   SPECIAL ANNOT  END -->
 
-
-
     <div class="cards">
 
         <div class="cardbody">

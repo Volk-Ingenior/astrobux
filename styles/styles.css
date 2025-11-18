@@ -213,4 +213,6 @@ input[type="number"] {
 }
 
 
-footer {}
+footer {
+    background-color: azure;
+}
