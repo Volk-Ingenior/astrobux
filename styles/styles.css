@@ -183,9 +183,7 @@ input[type="number"] {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
 
 .dv_scores_descr {
     font-size: 12px;
@@ -203,5 +201,16 @@ input[type="number"] {
     margin-left: 5%;
     margin-right: 5%;
 }
+
+.graf_state {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(187, 187, 187);
+    justify-content: center;
+    margin: 5px;
+    flex-grow: 1;
+
+}
+
 
 footer {}

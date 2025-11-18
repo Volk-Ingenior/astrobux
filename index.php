@@ -1,3 +1,18 @@
+<?php
+function getDayOfYear_simple(string $dateString): int|false {
+    $timestamp = strtotime($dateString);
+
+    if ($timestamp === false) {
+        return false;
+    }
+    $dayOfYear_zeroBased = date('z', $timestamp);
+    
+    return (int)$dayOfYear_zeroBased + 1;
+}
+$currentDay_simple = getDayOfYear_simple('now');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,10 +31,19 @@
     <div class="header">
         <div class="slogan">augurium</div>
         <div class="date_t">Сегодня: </div>
-        <div class="small_slogan"><b> <?php   echo date("d.m.Y");  ?> </b> | <b> Понедельник </b> | <b>119 День Года</b>
+        <div class="small_slogan"><b> <?php   echo date("d.m.Y");  ?> </b> |
+            <b> <?php
+                $timestamp = time();
+                $day_number = date('N', $timestamp);
+                $days_of_week = array( 1 => 'Понедельник',  2 => 'Вторник',   3 => 'Среда',   4 => 'Четверг',   5 => 'Пятница',   6 => 'Суббота',   7 => 'Воскресенье');
+                $today = $days_of_week[$day_number];
+                echo  $today ;
+                ?>
+            </b> |
+            <b><?php echo $currentDay_simple; ?>-й день года</b>
         </div>
-
     </div>
+
 
     <!--   MENU  START  -->
     <div class="menu">
@@ -71,7 +95,7 @@
 
         <div class="todayIs central onwidth">
             <p><b>Лунная фаза</b></p>
-            <div class="moon_phase"></div>
+            <div class="moon_phase "></div>
             <br>
             <div class="phase"><b>Фаза 4</b></div>
             <div class="phase description">Красивая полная луна</div>
@@ -108,12 +132,13 @@
 
     <!-- SPECIAL ANNOT START -->
     <div class="todayinfogram">
-        Питание
-        Сон
-        Отношения
-        Опасность(Окружение)
-
-
+        <div class="graf_state">Сон</div>
+        <div class="graf_state">Отношения</div>
+        <div class="graf_state">Питание</div>
+        <div class="graf_state">Опасности</div>
+        <div class="graf_state">Окружение</div>
+        <div class="graf_state">Тонус</div>
+        <div class="graf_state">Восприятие</div>
     </div>
 
 
@@ -142,7 +167,6 @@
         </div>
 
     </div>
-
 
 
 
