@@ -139,6 +139,8 @@ $currentDay_simple = getDayOfYear_simple('now');
         <div class="graf_state">Окружение</div>
         <div class="graf_state">Тонус</div>
         <div class="graf_state">Восприятие</div>
+        <div class="graf_state">Память</div>
+        <div class="graf_state">События</div>
     </div>
 
 
