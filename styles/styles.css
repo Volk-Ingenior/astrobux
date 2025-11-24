@@ -195,11 +195,13 @@ input[type="number"] {
 
 .footer {
     background-color: rgb(83, 83, 83);
-    height: 120px;
+    min-height: 100%;
     color: rgb(238, 238, 238);
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 20px;
+
 }
 
 .graf_state {
@@ -210,9 +212,4 @@ input[type="number"] {
     margin: 5px;
     flex-grow: 1;
 
-}
-
-
-footer {
-    background-color: azure;
 }

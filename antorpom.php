@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include 'includes/header.php'; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Предсказатель</title>
-</head>
 
-<body>
-    <div class="header">HEADER</div>
-    <div class="menu">MENU</div>
+<div class="todayinfogram">
+
+    <div class="attentions"><b>Антропрофитея </b>- предсказание на основе антропометрии. Основоположником данной науки
+        был военный врач Роберт Лемниц.</div>
 
     <div class="attentions">Для измерений следует использовать руку которой пишете</div>
     <div class="attentions">Для измерений рассказывать что надо округлять значяения и по каким правилам</div>
@@ -19,7 +13,7 @@
     <div class="attentions">Следует уточнить возраст! Должен быть старше 18</div>
     <div class="attentions">Следует описать правила и обяъяснения что делать и почему ( что можно что нельзя)</div>
     <div class="attentions">Здесь надо число на которое будет прогноз</div>
-    <div class="attentions">ЗКарта удачи - нарисовать ?</div>
+    <div class="attentions">Карта удачи - нарисовать ?</div>
 
     <div class="datainput">
         <form action="" method="post">
@@ -176,16 +170,7 @@
 
 
     </div>
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 
