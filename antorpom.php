@@ -3,10 +3,14 @@
 
 <div class="todayinfogram">
 
-    <div class="attentions"><b>Антропрофитея </b>- предсказание на основе антропометрии. Основоположником данной науки
+    <div class="attentions todayIs onwidth"><b>Антропрофитея </b>- предсказание на основе антропометрии.
+        Основоположником данной
+        науки
         был военный врач Роберт Лемниц.</div>
 
     <div class="attentions">Для измерений следует использовать руку которой пишете</div>
+    <div class="attentions">Все измерения в сантиметрах!</div>
+    <div class="attentions">Нужен гибкий сантиметр!</div>
     <div class="attentions">Для измерений рассказывать что надо округлять значяения и по каким правилам</div>
     <div class="attentions">Надо написать инструкцию как делать замеры с картинками</div>
     <div class="attentions">Нужно указывать дату на которую делать расклад, предлагать только три ближайшие даты</div>
@@ -14,37 +18,59 @@
     <div class="attentions">Следует описать правила и обяъяснения что делать и почему ( что можно что нельзя)</div>
     <div class="attentions">Здесь надо число на которое будет прогноз</div>
     <div class="attentions">Карта удачи - нарисовать ?</div>
+    <br>
 
     <div class="datainput">
         <form action="" method="post">
-            <br>
-            <input type="number" name="yearbirth" id="digits" minlength="4" maxlength="4" min="1910" value="1984"
-                step="1" required>
-            <label for="yearbirth">Введите год рождения</label>
-            <br><br>
-            <input type="number" name="mainHeight" id="digits" value="170" min="30" step="1" required>
-            <label for="mainHeight">Введите рост (в сантиметрах)</label>
-            <br><br>
-            <input type="number" name="dl_antropos" id="digits" value="19" min="7" step="1" required>
-            <label for="">Введите длину Ладонь + Средний Палец ( в сантиметрах)</label>
-            <br><br>
 
-            <input type="number" name="sh_antropos" id="digits" value="15" min="7" step="1" required>
-            <label for="sh_antropos">Введите ширину Ладонь + Большой Палец ( в сантиметрах)</label>
-            <br><br>
-            <input type="number" name="heri_manus_antropos" id="digits" value="39" min="20" step="1" required>
-            <label for="heri_manus_antropos">Введите длина руки (которой пишете) от локтя до среднего пальца</label>
-            <br><br>
-            <input type="number" name="prosopo_antropos" id="digits" value="15" min="7" step="1" required>
-            <label for="prosopo_antropos">Введите размер половины лица( в сантиметрах)</label>
-            <br><br><br>
+            <div class="datainputCard">
+                <input type="number" name="yearbirth" id="digits" minlength="4" maxlength="4" min="1910" value="1984"
+                    step="1" required>
+                <label for="yearbirth">Введите год рождения</label>
+                <br>
+                <input type="number" name="mainHeight" id="digits" value="170" min="30" step="1" required>
+                <label for="mainHeight">Введите рост (в сантиметрах)</label>
+
+            </div>
+
+            <div class="datainputCard">
+                <div class="help_img"><img src="imgs/pic.jpg" alt="" srcset=""></div>
+                <label for="">Введите длину Ладонь + Средний Палец ( в сантиметрах)</label>
+                <br>
+                <input type="number" name="dl_antropos" id="digits" value="19" min="7" step="1" required>
+            </div>
+
+            <div class="datainputCard">
+                <div class="help_img"></div>
+                <label for="sh_antropos">Введите ширину Ладонь + Большой Палец ( в сантиметрах)</label>
+                <br>
+                <input type="number" name="sh_antropos" id="digits" value="15" min="7" step="1" required>
+            </div>
+
+            <div class="datainputCard">
+                <div class="help_img"></div>
+                <label for="heri_manus_antropos">Введите длина руки (которой пишете) от локтя до среднего
+                    пальца</label><br>
+                <input type="number" name="heri_manus_antropos" id="digits" value="39" min="20" step="1" required>
+            </div>
+
+            <div class="datainputCard">
+                <div class="help_img"></div>
+                <input type="number" name="prosopo_antropos" id="digits" value="15" min="7" step="1" required>
+                <label for="prosopo_antropos">Введите размер половины лица( в сантиметрах)</label>
+            </div>
+
             <input class="submit_btn" type="submit" value="Рассчитать">
-            <br>
+
+
         </form>
 
-        <div>РЕЗУЛЬТАТ </div>
+    </div>
 
-        <?php
+
+    <div>РЕЗУЛЬТАТ </div>
+
+    <?php
         #Год рождения
         
         #Рост
@@ -84,12 +110,10 @@
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,       // Получать результаты в виде ассоциативных массивов
                     PDO::ATTR_EMULATE_PREPARES   => false,                  // Отключение эмуляции подготовленных запросов
                 ];
-                
                 // Создание объекта PDO, устанавливающего соединение
                 $pdo = new PDO($dsn, $username, $password, $options);
                 
                 echo "✅ Подключение к базе данных успешно установлено!";
-                
             } 
             catch (PDOException $e) {
                 // Обработка ошибок подключения
@@ -125,51 +149,13 @@
                 echo "Ошибка выполнения запроса: " . $e->getMessage();
             }
     
-            $pdo = null;
-
-            function checkLastTwoDigitsMath(int $mynumber): int 
-                {
-                if ($mynumber <= 0) {
-                    return 5;             
-                }
-                else if  ($mynumber % 100 === 0) {
-                        return 10; 
-                    } 
-                else return findDigitalRoot($mynumber);      
-                }
-
-
-            function findDigitalRoot(int $number): int {
-                // Преобразуем число в абсолютное значение на случай отрицательных входных данных
-                $currentSum = abs($number);
-                // Цикл do-while для обеспечения выполнения как минимум одной итерации,
-                // а затем повторения, пока результат не станет однозначным числом (< 10).
-                do {
-                    // Преобразуем текущую сумму в строку для итерации по цифрам
-                    $numberString = (string)$currentSum;
-                    $tempSum = 0;
-                    // Суммируем цифры текущего числа/суммы
-                    for ($i = 0; $i < strlen($numberString); $i++) {
-                        // Приводим символ-цифру к целому числу и добавляем к временной сумме
-                        $tempSum += (int)$numberString[$i];
-                    }
-                    // Обновляем текущую сумму для следующей итерации цикла (если потребуется)
-                    $currentSum = $tempSum;
-
-                } while ($currentSum >= 10); // Повторяем, если сумма всё ещё не однозначное число
-
-                return $currentSum;
-            }
-
-
-
-
+            $pdo = null;          
 
             ?>
 
 
 
-    </div>
+</div>
 </div>
 
 

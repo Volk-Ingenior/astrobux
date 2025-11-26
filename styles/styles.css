@@ -20,6 +20,7 @@ body {
     font-size: 100px;
     font-weight: bold;
     text-transform: uppercase;
+    animation: text-color-shift 1s infinite alternate ease-in-out;
 }
 
 .menu {
@@ -211,5 +212,43 @@ input[type="number"] {
     justify-content: center;
     margin: 5px;
     flex-grow: 1;
+}
 
+.help_img {
+    width: 350px;
+    height: 350px;
+    border: 1px solid red;
+}
+
+.datainput {
+    border: 1px solid blue;
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+}
+
+.datainputCard {
+    border: 1px solid green;
+}
+
+.datainputCard img {
+    width: 350px;
+    height: 350px;
+
+}
+
+@keyframes text-color-shift {
+
+    /* 0% - начало цикла анимации */
+    0% {
+        color: white;
+        /* Белый цвет */
+    }
+
+    /* 100% - конец цикла анимации */
+    100% {
+        color: #6b6b6b;
+
+    }
 }

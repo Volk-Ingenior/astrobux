@@ -21,4 +21,39 @@ function getToday(): string{
     return $days_of_week[$day_number];
 }
 
+
+function checkLastTwoDigitsMath(int $mynumber): int  {
+     if ($mynumber <= 0) {
+       return 5;             
+                }
+                else if  ($mynumber % 100 === 0) {
+                        return 10; 
+                    } 
+                else return findDigitalRoot($mynumber);      
+ }
+
+     function findDigitalRoot(int $number): int {
+                // Преобразуем число в абсолютное значение на случай отрицательных входных данных
+                $currentSum = abs($number);
+                // Цикл do-while для обеспечения выполнения как минимум одной итерации,
+                // а затем повторения, пока результат не станет однозначным числом (< 10).
+                do {
+                    // Преобразуем текущую сумму в строку для итерации по цифрам
+                    $numberString = (string)$currentSum;
+                    $tempSum = 0;
+                    // Суммируем цифры текущего числа/суммы
+                    for ($i = 0; $i < strlen($numberString); $i++) {
+                        // Приводим символ-цифру к целому числу и добавляем к временной сумме
+                        $tempSum += (int)$numberString[$i];
+                    }
+                    // Обновляем текущую сумму для следующей итерации цикла (если потребуется)
+                    $currentSum = $tempSum;
+
+                } while ($currentSum >= 10); // Повторяем, если сумма всё ещё не однозначное число
+
+                return $currentSum;
+            }
+
+
+
 ?>
