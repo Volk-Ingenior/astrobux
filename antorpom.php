@@ -1,7 +1,7 @@
 <?php include 'includes/header.php'; ?>
 
 
-<div class="todayinfogram">
+<div class="blockinfogram">
 
     <div class="attentions todayIs onwidth"><b>Антропрофитея </b>- предсказание на основе антропометрии.
         Основоположником данной
@@ -20,19 +20,20 @@
     <div class="attentions">Карта удачи - нарисовать ?</div>
     <br>
 
-    <div class="datainput">
-        <form action="" method="post">
 
-            <div class="datainputCard">
-                <input type="number" name="yearbirth" id="digits" minlength="4" maxlength="4" min="1910" value="1984"
-                    step="1" required>
-                <label for="yearbirth">Введите год рождения</label>
-                <br>
-                <input type="number" name="mainHeight" id="digits" value="170" min="30" step="1" required>
-                <label for="mainHeight">Введите рост (в сантиметрах)</label>
+    <form action="" method="post">
 
-            </div>
+        <div class="">
+            <input type="number" name="yearbirth" id="digits" minlength="4" maxlength="4" min="1910" value="1984"
+                step="1" required>
+            <label for="yearbirth">Введите год рождения</label>
+            <br>
+            <input type="number" name="mainHeight" id="digits" value="170" min="30" step="1" required>
+            <label for="mainHeight">Введите рост (в сантиметрах)</label>
+        </div>
+        <br>
 
+        <div class="datainput">
             <div class="datainputCard">
                 <div class="help_img"><img src="imgs/pic.jpg" alt="" srcset=""></div>
                 <label for="">Введите длину Ладонь + Средний Палец ( в сантиметрах)</label>
@@ -41,31 +42,32 @@
             </div>
 
             <div class="datainputCard">
-                <div class="help_img"></div>
+                <div class="help_img"><img src="imgs/pic.jpg" alt="" srcset=""></div>
                 <label for="sh_antropos">Введите ширину Ладонь + Большой Палец ( в сантиметрах)</label>
                 <br>
                 <input type="number" name="sh_antropos" id="digits" value="15" min="7" step="1" required>
             </div>
 
             <div class="datainputCard">
-                <div class="help_img"></div>
+                <div class="help_img"><img src="imgs/pic.jpg" alt="" srcset=""></div>
                 <label for="heri_manus_antropos">Введите длина руки (которой пишете) от локтя до среднего
                     пальца</label><br>
                 <input type="number" name="heri_manus_antropos" id="digits" value="39" min="20" step="1" required>
             </div>
 
             <div class="datainputCard">
-                <div class="help_img"></div>
+                <div class="help_img"><img src="imgs/pic.jpg" alt="" srcset=""></div>
                 <input type="number" name="prosopo_antropos" id="digits" value="15" min="7" step="1" required>
                 <label for="prosopo_antropos">Введите размер половины лица( в сантиметрах)</label>
             </div>
+        </div>
 
-            <input class="submit_btn" type="submit" value="Рассчитать">
+        <input class="submit_btn" type="submit" value="Рассчитать">
 
 
-        </form>
+    </form>
 
-    </div>
+
 
 
     <div>РЕЗУЛЬТАТ </div>
@@ -155,9 +157,9 @@
 
 
 
-</div>
-</div>
 
+
+</div>
 
 
 

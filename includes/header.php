@@ -33,13 +33,13 @@
             <div class="navi">Антропрофитея</div>
         </a>
         <a href="http://#">
-            <div class="navi">Диемма</div>
-        </a>
-        <a href="http://#">
             <div class="navi">Гороскопы</div>
         </a>
         <a href="http://#">
             <div class="navi">Зодиак</div>
+        </a>
+        <a href="http://#">
+            <div class="navi">Диемма</div>
         </a>
 
     </div>

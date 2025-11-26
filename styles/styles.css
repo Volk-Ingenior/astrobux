@@ -214,29 +214,36 @@ input[type="number"] {
     flex-grow: 1;
 }
 
-.help_img {
-    width: 350px;
-    height: 350px;
-    border: 1px solid red;
+.help_img {}
+
+.help_img>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
+
 
 .datainput {
-    border: 1px solid blue;
-    width: 100%;
     display: flex;
-    justify-content: stretch;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
+
+.blockinfogram {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
 
 .datainputCard {
-    border: 1px solid green;
+    box-sizing: border-box;
+    width: 300px;
+    padding: 10px;
 }
 
-.datainputCard img {
-    width: 350px;
-    height: 350px;
 
-}
+
 
 @keyframes text-color-shift {
 
