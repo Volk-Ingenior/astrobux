@@ -1,6 +1,5 @@
 <?php include 'includes/header.php'; ?>
 
-
 <div class="blockinfogram">
 
     <div class="attentions todayIs onwidth"><b>Антропрофитея </b>- предсказание на основе антропометрии.

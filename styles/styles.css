@@ -240,9 +240,8 @@ input[type="number"] {
     box-sizing: border-box;
     width: 300px;
     padding: 10px;
+    border: 1px solid red;
 }
-
-
 
 
 @keyframes text-color-shift {
