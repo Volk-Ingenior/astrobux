@@ -32,7 +32,7 @@
         <a href="antorpom.php">
             <div class="navi">Антропрофитея</div>
         </a>
-        <a href="http://#">
+        <a href="horoscopes.php">
             <div class="navi">Гороскопы</div>
         </a>
         <a href="http://#">

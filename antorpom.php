@@ -67,13 +67,10 @@
     </form>
 
 
-
-
     <div>РЕЗУЛЬТАТ </div>
 
     <?php
         #Год рождения
-        
         #Рост
             $rost = $_POST["mainHeight"];
         #Длина ладони + средний палец
@@ -84,7 +81,6 @@
             $handFing = $_POST["heri_manus_antropos"];
          #Длина половины лица  
             $faceHalf= $_POST["prosopo_antropos"];           
-
            # echo "Целевой коэффициент:  ";
             $target = round( (($armGreat/$rost ) + ($armMedian/$rost) + ($handFing /$rost)+($faceHalf/$rost ))* 10000);
             #echo $target;
