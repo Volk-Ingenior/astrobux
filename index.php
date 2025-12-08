@@ -1,5 +1,6 @@
 <?php include 'includes/header.php'; ?>
 
+
 <!--   INFOGRAF TODAY  START -->
 
 <div class="todayinfogram">
@@ -24,9 +25,9 @@
         <p>Энергетический потенциал</p>
     </div>
 
-    <div class="todayIs central onwidth">
+    <div class="todayIs central onwidth moon stars">
         <p><b>Лунная фаза</b></p>
-        <div class="moon_phase "></div>
+        <div class="moon_phase "><img src="imgs/moon_phases/5fullmoon.png" alt="" srcset=""></div>
         <br>
         <div class="phase"><b>Фаза 4</b></div>
         <div class="phase description">Красивая полная луна</div>

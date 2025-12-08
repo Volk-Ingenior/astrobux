@@ -3,7 +3,6 @@
 helius universum<br>
 гороскоп на завтра
 
-
 <div class="blockinfogram">
 
     <div class="horostyle">

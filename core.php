@@ -55,5 +55,11 @@ function checkLastTwoDigitsMath(int $mynumber): int  {
             }
 
 
+/*Функция определения фазы луны*/ 
+
+            function moonPhase(){
+                
+            }
+
 
 ?>
