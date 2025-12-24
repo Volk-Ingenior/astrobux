@@ -192,6 +192,27 @@ input[type="number"] {
     text-align: center;
 }
 
+.geomag {
+    background-image: url('../imgs/earth.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.divego {
+    color: white;
+    background: #f7689c;
+    background: radial-gradient(circle, rgba(247, 104, 156, 1) 0%, rgba(0, 43, 92, 1) 100%);
+
+}
+
+.biorythm {
+    color: white;
+    background: #080707;
+    background: linear-gradient(176deg, rgba(8, 7, 7, 1) 0%, rgba(0, 0, 120, 1) 53%, rgba(47, 142, 161, 1) 100%);
+
+
+}
+
 .stars {
     background-image: url('../imgs/sky.jpg');
     background-size: cover;
@@ -199,6 +220,16 @@ input[type="number"] {
 
 .phase {
     font-size: 12px;
+}
+
+.starcrow {
+    background-image: url('../imgs/starscrow.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.divego {
+    background-color: rgb(138, 0, 0);
 }
 
 .dv_scores {

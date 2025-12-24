@@ -1,46 +1,50 @@
 <?php include 'includes/header.php'; ?>
 
+<?php 
+$moonInfo= getMoonPhase(); 
+$geomagnet = geomag() ; 
+ ?>
 
 <!--   INFOGRAF TODAY  START -->
 
 <div class="todayinfogram">
-    <div class="todayIs">
+    <div class="todayIs geomag">
 
-        <div class="today">
+        <div class="today ">
             <div class="today-lbl">
                 <p>Индекс гео-магнитных возмущений</p>
             </div>
             <div class="tdate">
-                5
+                <?php echo $geomagnet[0];  ?>
             </div>
         </div>
         <br>
 
-        <div class="about-date">ГМ буря: Умеренно</div>
-
+        <div class="about-date">ГМ буря: <?php echo $geomagnet[1];  ?></div>
 
     </div>
-    <div class="todayIs onwidth">
+    <div class="todayIs onwidth starcrow">
         <p><b>День звездных скоплнений</b></p>
         <p>Энергетический потенциал</p>
     </div>
 
     <div class="todayIs central onwidth moon stars">
         <p><b>Лунная фаза</b></p>
-        <div class="moon_phase "><img src="imgs/moon_phases/5fullmoon.png" alt="" srcset=""></div>
+        <div class="moon_phase "><img src="imgs/moon_phases/<?php echo $moonInfo[0];  ?>.png" alt="" srcset="">
+        </div>
         <br>
-        <div class="phase"><b>Фаза 4</b></div>
-        <div class="phase description">Красивая полная луна</div>
+        <div class="phase"><b><?php echo $moonInfo[1];  ?></b></div>
+        <div class="phase description"><?php echo $moonInfo[2];  ?></div>
     </div>
 
-    <div class="todayIs central  onwidth vrtcl">
+    <div class="todayIs central  onwidth vrtcl divego">
         <div>
             <div class="dv_scores ">8 из 10</div>
             <div class="dv_scores_descr">баллов по шкале Дивего</div>
         </div>
     </div>
 
-    <div class="todayIs onwidth">
+    <div class="todayIs onwidth biorythm">
         <h4>Биоритмический вектор</h4>
         <div class="phisic">Физический: <b>45%</b></div>
         <div class="emotion">Эмоциональный: <b>25%</b></div>
@@ -118,27 +122,7 @@
 
 </footer>
 
-
-
-
 <!-- END FOOTER -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 
